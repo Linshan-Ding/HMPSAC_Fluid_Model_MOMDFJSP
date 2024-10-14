@@ -314,7 +314,7 @@ class FJSP(Instance, Data):
 # 测试环境
 if __name__ == '__main__':
     file_name = 'DDT1.0_M15_S1'
-    path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/HMPSAC'
+    path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/HMPSAC'
     fjsp_object = FJSP(use_instance=False, file_name=file_name, path=path)
     print(fjsp_object.power_mrj_dict)
     print(fjsp_object.power_m_dict)

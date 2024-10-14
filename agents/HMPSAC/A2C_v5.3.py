@@ -20,7 +20,7 @@ from visdom import Visdom
 from utilities.Utility_Class import AddData
 agent_version = '_v5.3'
 # 训练结果数据保存位置
-path_file_name = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/results/HMPSAC/training' + agent_version + '.csv'
+path_file_name = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/HMPSAC/training' + agent_version + '.csv'
 add_data_object = AddData(path_file_name)
 add_data_object.add_data(['epoch', 'energy'])
 # 监控训练过程
@@ -101,7 +101,7 @@ class DA3C(Base_Agent, Config):
         Config.__init__(self)  # 继承算法超参数类
         self.num_processes = multiprocessing.cpu_count()  # 电脑线程数量|四核八线程
         self.worker_processes = max(1, self.num_processes - 3)  # 启用线程数
-        self.path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/HMPSAC'  # 测试算例的存储位置
+        self.path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/HMPSAC'  # 测试算例的存储位置
         self.file_name = 'DDT1.0_M15_S3'  # 测试算例的文件夹名字
         self.environment_test = MO_DFJSP_Environment(use_instance=False, path=self.path, file_name=self.file_name)  # 测试环境
         self.config = Config
@@ -234,7 +234,7 @@ class Actor_Critic_Worker(torch.multiprocessing.Process):
 
     def save_actor_model(self, save_model_boole=True):
         """保存全局策略网络"""
-        file_path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/results/HMPSAC/policy_networks' + agent_version + '/'
+        file_path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/HMPSAC/policy_networks' + agent_version + '/'
         if save_model_boole:
             torch.save(self.actor_task_model.state_dict(), file_path + 'actor_task_model.path')
             torch.save(self.actor_machine_model.state_dict(), file_path + 'actor_machine_model.path')

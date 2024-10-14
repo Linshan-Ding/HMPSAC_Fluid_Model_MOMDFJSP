@@ -503,7 +503,7 @@ class Data():
 if __name__ == '__main__':
     # 添加训练数据
     # data_training = [1, 2, 3]
-    # path_file_name = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/results/DA3C/training.csv'
+    # path_file_name = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/DA3C/training.csv'
     # result_data = AddData(path_file_name)
     # result_data.add_data(data_training)
     data_process = DataProcess()

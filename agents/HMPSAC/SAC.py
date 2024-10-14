@@ -18,7 +18,7 @@ from utilities.Utility_Class import AddData
 
 # 训练结果数据保存位置
 agent_version = '_v3.1'
-path_file_name = 'D:/Python project/Deep_Reinforcement_learning_FJSP/results/HMPSAC/training' + agent_version + '.csv'
+path_file_name = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/HMPSAC/training' + agent_version + '.csv'
 add_data_object = AddData(path_file_name)
 add_data_object.add_data(['epoch', 'makespan', 'tardiness', 'energy'])
 # 监控训练过程
@@ -133,7 +133,7 @@ class SAC_Discrete(Base_Agent, Config):
         self.action_types = "DISCRETE"
         assert self.action_types == "DISCRETE", "Action types must be discrete. Use SAC instead for continuous actions"
         # 定义测试环境
-        self.path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/HMPSAC'  # 测试算例的存储位置
+        self.path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/HMPSAC'  # 测试算例的存储位置
         self.file_name = 'DDT0.5_M10_S1'  # 测试算例的文件夹名字
         self.environment = MO_DFJSP_Environment(use_instance=False, path=self.path, file_name=self.file_name)  # 测试环境
         # 超参数
@@ -186,7 +186,7 @@ class SAC_Discrete(Base_Agent, Config):
     def load_policy_model(self):
         """加载三目标策略网络"""
         for objective, policy in self.objectives_policy.items():
-            file_path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/results/HMPSAC/policy_networks_v5.' + str(policy + 1) + '/'
+            file_path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/HMPSAC/policy_networks_v5.' + str(policy + 1) + '/'
             actor_net_task = TaskPolicyNet(input_size_1=30, hidden_size=200, hidden_layer_1=3, output_size_1=12).to(self.device)
             actor_net_task.load_state_dict(torch.load(file_path + 'actor_task_model.path'))
             self.policy_dict[policy]['task'] = actor_net_task

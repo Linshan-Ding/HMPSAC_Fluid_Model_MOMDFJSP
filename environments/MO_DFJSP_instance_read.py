@@ -116,8 +116,8 @@ class Data():
 # 测试
 if __name__ == '__main__':
     # 读取功率信息到csv文件
-    path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/industrial'
-    path_write = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/industrial/power.csv'
+    path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/industrial'
+    path_write = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/industrial/power.csv'
     file_name = 'DDT0.5_M20_S5'
     kind_name = ['K38A', 'K38B', 'K50']
     data = Data(path, file_name)
@@ -131,8 +131,8 @@ if __name__ == '__main__':
             writer.writerow(row)
 
     # file_name = 'DDT0.5_M10_S1'
-    # path = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/data/HMPSAC'
-    # path_write = 'D:/Python project/Deep_Reinforcement_Learning_FJSP/results/HMPSAC/task_number.csv'
+    # path = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/data/HMPSAC'
+    # path_write = 'D:/Python project/HMPSAC_Fluid_Model_MOMDFJSP/results/HMPSAC/task_number.csv'
     # file_name_list \
     #     = ['DDT0.5_M10_S1', 'DDT0.5_M10_S3', 'DDT0.5_M10_S5', 'DDT0.5_M15_S1', 'DDT0.5_M15_S3', 'DDT0.5_M15_S5',
     #        'DDT0.5_M20_S1', 'DDT0.5_M20_S3', 'DDT0.5_M20_S5', 'DDT1.0_M10_S1', 'DDT1.0_M10_S3', 'DDT1.0_M10_S5',
