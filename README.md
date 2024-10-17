@@ -15,7 +15,7 @@ Conda==4.10.3
 ```
 environment: the python-based discretation simulation environment of workshop scheduling
 data: the data of all instances
-DDQN: the code of main program
+agents: the code of main program
 result: save the trained model
 ```
 ## Citation
